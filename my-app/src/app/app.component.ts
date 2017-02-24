@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works!';
+  name = 'willy bardales'
+
+
+eventoClick():void{
+  this.name = this.name.toUpperCase();
+  console.log("ALGUIEN HIZO CLICK");
+}
+
 }
