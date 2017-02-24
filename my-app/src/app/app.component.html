@@ -1,13 +1,7 @@
-<div>
-<input type="text" [(ngModel)]="name" />
-</div>
-
 <h1>
-  {{title}}
+{{title}}
 </h1>
 
-<h3>
-  {{name}}
-</h3>
-
-<button (click)="eventoClick()">Click me!</button>
+<div *ngFor="let voto of votos">
+  <input-component voto={{voto.title}}></input-component>
+</div>

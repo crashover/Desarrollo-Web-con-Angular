@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import {InputComponent} from './input/input.component';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,12 +9,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works!';
-  name = 'willy bardales'
 
-
-eventoClick():void{
-  this.name = this.name.toUpperCase();
-  console.log("ALGUIEN HIZO CLICK");
-}
-
+  votos = [
+    {title: 'opción 1'},
+    {title: 'opción 2'},
+    {title: 'opción 3'},
+    {title: 'opción 4'}
+  ]
 }
