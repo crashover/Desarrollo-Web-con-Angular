@@ -7,10 +7,14 @@ import { AppComponent } from './app.component';
 
 import { InputComponent } from './input/input.component'
 
+import { ConversorPipe } from './pipes/conversor.pipe'
+
+
 @NgModule({
   declarations: [
     AppComponent,
-    InputComponent
+    InputComponent,
+    ConversorPipe
   ],
   imports: [
     BrowserModule,

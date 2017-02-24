@@ -21,4 +21,7 @@ export class AppComponent {
   addVoto(response:string){
     this.votacion = "usted elegio : " + response;
   }
+
+  cantidad = 5;
+  factor = 1
 }
