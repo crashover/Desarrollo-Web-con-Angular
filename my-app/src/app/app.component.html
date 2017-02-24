@@ -3,5 +3,7 @@
 </h1>
 
 <div *ngFor="let voto of votos">
-  <input-component voto={{voto.title}}></input-component>
+  <input-component voto={{voto.title}} (addVoto)="addVoto($event)"></input-component>
 </div>
+
+<h1>{{votacion}}</h1>
