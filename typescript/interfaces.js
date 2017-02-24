@@ -5,7 +5,7 @@ var personaUno = {
 };
 var personaDos = {
     first_name: 'Pepe',
-    last_name: 'Perez'
+    last_name: 'Perez',
 };
 console.log(personaUno);
 console.log(personaDos);

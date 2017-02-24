@@ -1,6 +1,19 @@
 {
     "compilerOptions": {
         "target": "ES5",
-        "experimentalDecorators": true
-    }
+        "experimentalDecorators": true,
+        "module":"system",
+        "noImplicitAny": true,
+        "removeComments": true, // produccion . remover los comentarios
+        "preserveConstEnums": true, //preservar enumerables
+        "sourceMap": true,
+        "outFile":"./tsc.js" //Compilar el archivo en ...
+    },
+    "include" : [
+        "*"
+    ],
+    "esclude": [
+        "node_modules",
+        "**/*.spec.ts"
+    ]
 }
