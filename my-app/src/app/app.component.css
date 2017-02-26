@@ -1,0 +1,33 @@
+.row{
+    background-color: #1B8BFF;
+    color:white;
+    margin: 0;
+}
+
+.options{
+background-color: #19B5E8;
+margin: 0;
+margin-top: 1em;
+padding-left: 15px;
+}
+
+.conversor{
+background-color: #28FFFB;
+padding-left: 15px;
+}
+
+.ticket{
+background-color: #19E8AA;
+margin-top: 1.5em;
+padding-bottom: 15px;
+}
+
+.gigant{
+  padding-bottom: 5px;
+  padding-top: 10px;
+}
+
+.input{
+  padding-left: 15px;
+  font-size: 25px;
+}

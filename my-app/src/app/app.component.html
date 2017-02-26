@@ -1,22 +1,40 @@
-<h1>
-{{title}}
-</h1>
+<!-- HEADER -->
+<div class="row">
+  <div class="col-md-offset-5">
+  <h1>{{title}}</h1>
+  </div>
+</div>
+<!-- /HEADER -->
 
+
+<!-- OPTIONS -->
+<div class="options">
 <div *ngFor="let voto of votos">
   <input-component voto={{voto.title}} (addVoto)="addVoto($event)"></input-component>
 </div>
+  <div class="gigant">
+  <p gigant myHighlight>{{votacion}}</p>
+  </div>
+</div>
+<!-- OPTIONS -->
 
-<h3 gigant myHighlight>{{votacion}}</h3>
+<!-- CONVERSOR -->
+<div class="conversor">
+    <h2>Conversor</h2>
+    <div class="cant">Cantidad: <input [(ngModel)]="cantidad"  /> </div>
+    <div class="dolar">1 dolar es : <input [(ngModel)]="factor" /> </div>
 
-<h2>Conversor</h2>
+    <div class="gigant">
+    <p myHighlight gigant>
+      Oh es : {{cantidad | conversorPipe:factor}}
+    </p>
+    </div>
 
-<div>Cantidad: <input [(ngModel)]="cantidad"  /> </div>
-<div>1 dolar es : <input [(ngModel)]="factor" /> </div>
+</div>
+<!-- CONVERSOR -->
 
-<p myHighlight gigant>
-  Oh es : {{cantidad | conversorPipe:factor}}
-</p>
-
+<!-- TICKET SUPPORT -->
+<div class="ticket">
 <ul>
   <li *ngFor="let ticket of tickets" gigant>
     <b>Ticket N: {{ticket.id}}</b> - {{ticket.titulo}}
@@ -25,24 +43,14 @@
 </ul>
 
 <form [formGroup]="myForm" (ngSubmit)="myForm.value">
-  <div>
+  <div class="input">
     <label for="nameInput">Nombre</label>
     <input type="text" id="nameInput" placeholder="Nombre"
            name="nombre" [formControl]="myForm.controls['name']" />
-  </div>
-<!--
-  <div>
-    <label for="apellidoInput">Apellido</label>
-    <input type="text" id="apellidoInput" placeholder="Apellido"
-           name="Apellido" ngModel />
+   <button type="submit">Submit</button>
   </div>
 
-  <div>
-    <label for="twitterInput">twitter</label>
-    <input type="text" id="twitterInput" placeholder="Twitter"
-           name="twitter" ngModel />
-  </div>
--->
-    <button type="submit">Submit</button>
 
 </form>
+</div>
+<!-- /TICKET SUPPORT -->
