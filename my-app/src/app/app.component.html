@@ -65,3 +65,14 @@
 
   <button class="btn btn-default"(click)="reset()">Reset</button>
 </div>
+
+<!-- /RxJS con NGRx -->
+
+<!--NGZone -->
+  <div class="ngzone">
+    <p gigant> Progress: {{progress}}%</p>
+    <p gigant *ngIf="progress >= 100">Done proccessing {{label}} of angular zone!</p>
+    <button class="btn btn-default" (click)="processWithingAngularZone()">Con AngularZone</button>
+    <button class="btn btn-default" (click)="processOutsideOfAngularZone()">Sin AngularZone</button>
+  </div>
+<!--/NGZone -->
