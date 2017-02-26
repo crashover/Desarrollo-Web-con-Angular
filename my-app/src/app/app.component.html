@@ -54,3 +54,14 @@
 </form>
 </div>
 <!-- /TICKET SUPPORT -->
+
+<!-- RxJS con NGRx -->
+<div class="counter">
+  <div>
+    <h2>Counter: {{counter | async }} </h2></div>
+  <button class="btn btn-default"(click)="increment()">Incrementar</button>
+
+  <button class="btn btn-default"(click)="decrement()">Decrementar</button>
+
+  <button class="btn btn-default"(click)="reset()">Reset</button>
+</div>

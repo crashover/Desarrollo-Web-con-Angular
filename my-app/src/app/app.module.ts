@@ -16,6 +16,10 @@ import { GigantDirective } from './directives/gigant.directive'
 //service
 import { TicketService } from './services/ticket.service';
 
+//ngrx
+import { StoreModule } from '@ngrx/store';
+import { counterReducer } from './services/counter';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +32,8 @@ import { TicketService } from './services/ticket.service';
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpModule
+    HttpModule,
+    StoreModule.provideStore({counter: counterReducer})
   ],
   providers: [TicketService],
   bootstrap: [AppComponent]
