@@ -28,7 +28,7 @@ import { RouterModule, Routes }from '@angular/router';
 import { APPROUTER } from './commons/router';
 
 //firebase
-import { AngularFireModule } from 'angularfire2'
+import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
 
 export const firebaseConfig={
     apiKey: "AIzaSyDsID6QCYwikSBKGYPziP5hIsfaTbkpsLs",
@@ -36,6 +36,11 @@ export const firebaseConfig={
     databaseURL: "https://my-app-c3b4e.firebaseio.com",
     storageBucket: "my-app-c3b4e.appspot.com",
     messagingSenderId: "929281286134"
+};
+
+export const myFirebaseAuthConfig = {
+  provider: AuthProviders.Google,
+  method: AuthMethods.Popup,
 }
 
 @NgModule({
@@ -56,7 +61,7 @@ export const firebaseConfig={
     HttpModule,
     StoreModule.provideStore({counter: counterReducer}),
     RouterModule.forRoot(APPROUTER),
-    AngularFireModule.initializeApp(firebaseConfig)
+    AngularFireModule.initializeApp(firebaseConfig, myFirebaseAuthConfig)
   ],
   providers: [TicketService],
   bootstrap: [InitComponent]

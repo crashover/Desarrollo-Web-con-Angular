@@ -11,7 +11,8 @@ import { Observable } from 'rxjs/observable';
 
 import { Router } from '@angular/router';
 
-import { AngularFire, FirebaseListObservable } from 'angularfire2'
+import { AngularFire, FirebaseListObservable } from 'angularfire2';
+import { AuthProviders, AuthMethods } from 'angularfire2';
 
 interface AppState{
   counter: number;
@@ -40,6 +41,11 @@ export class AppComponent {
     ){
 
     console.log(af.database.list('/items'));
+
+    this.af.auth.login({
+      provider: AuthProviders.Google,
+      method: AuthMethods.Popup,
+    });
 
     this.counter = store.select('counter');
     this.tickets = ticketService.getTickets();
