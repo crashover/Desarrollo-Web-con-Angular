@@ -6,6 +6,15 @@
 </div>
 <!-- /HEADER -->
 
+<nav class="ui-g">
+  <div class="ui-md-1 height100 rojo"></div>
+  <a class="ui-md-2 height100 verde"></a>
+  <a class="ui-md-3 height100 azul"></a>
+  <a class="ui-md-1 height100 violeta"></a>
+  <a class="ui-md-2 height100 amarillo"></a>
+  <a class="ui-md-1 height100 rojo"></a>
+
+</nav>
 
 <!-- OPTIONS -->
 <div class="options">
@@ -33,8 +42,6 @@
 </div>
 <!-- CONVERSOR -->
 
-md-checkbox
-
 <!-- TICKET SUPPORT -->
 
 <div class="ticket2">
@@ -42,7 +49,7 @@ md-checkbox
   <li *ngFor="let ticket of ticketFirebase |async" gigant>
     <b>Ticket N: {{ticket.id}}</b> - {{ticket.titulo}}
     <span myHighlight> [ {{ticket.estado}} ]</span>
-    <button md-raised-button (click)="removeTicket(ticket.$key)">Remove</button>
+    <button pButton label="Remove" (click)="removeTicket(ticket.$key)"></button>
     <button md-raised-button (click)="updateTicket(ticket.$key)">Update</button>
     <button md-raised-button (click)="verTicket(ticket.id)">Ver</button>
   </li>

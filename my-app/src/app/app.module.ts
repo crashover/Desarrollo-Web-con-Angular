@@ -47,6 +47,8 @@ export const myFirebaseAuthConfig = {
   method: AuthMethods.Popup,
 }
 
+import { ButtonModule } from 'primeng/primeng';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -60,6 +62,7 @@ export const myFirebaseAuthConfig = {
   ],
   imports: [
     BrowserModule,
+    ButtonModule,
     FormsModule,
     ReactiveFormsModule,
     HttpModule,

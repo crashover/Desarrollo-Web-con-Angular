@@ -51,3 +51,27 @@ padding-bottom: 15px;
   padding-bottom: 15px;
   padding-left: 15px;
 }
+
+.rojo{
+  background: red;
+}
+
+.verde{
+  background: green;
+}
+
+.azul{
+  background: blue;
+}
+
+.violeta{
+  background: lightpink;
+}
+
+.amarillo{
+  background: yellow;
+}
+
+.height100{
+  height: 100px;
+}
