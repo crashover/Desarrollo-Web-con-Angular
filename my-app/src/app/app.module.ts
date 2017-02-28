@@ -31,11 +31,11 @@ import { APPROUTER } from './commons/router';
 import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
 
 export const firebaseConfig={
-    apiKey: "AIzaSyDsID6QCYwikSBKGYPziP5hIsfaTbkpsLs",
-    authDomain: "my-app-c3b4e.firebaseapp.com",
-    databaseURL: "https://my-app-c3b4e.firebaseio.com",
-    storageBucket: "my-app-c3b4e.appspot.com",
-    messagingSenderId: "929281286134"
+    apiKey: "AIzaSyDWIOAF0BfpmQO0a2FO2wJ4r-E9det2bAU",
+    authDomain: "angular-willy.firebaseapp.com",
+    databaseURL: "https://angular-willy.firebaseio.com",
+    storageBucket: "angular-willy.appspot.com",
+    messagingSenderId: "417130248446"
 };
 
 export const myFirebaseAuthConfig = {
