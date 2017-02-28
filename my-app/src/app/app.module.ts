@@ -30,6 +30,10 @@ import { APPROUTER } from './commons/router';
 //firebase
 import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
 
+//material
+import { MaterialModule } from '@angular/material';
+import 'hammerjs';
+
 export const firebaseConfig={
     apiKey: "AIzaSyDWIOAF0BfpmQO0a2FO2wJ4r-E9det2bAU",
     authDomain: "angular-willy.firebaseapp.com",
@@ -61,7 +65,8 @@ export const myFirebaseAuthConfig = {
     HttpModule,
     StoreModule.provideStore({counter: counterReducer}),
     RouterModule.forRoot(APPROUTER),
-    AngularFireModule.initializeApp(firebaseConfig, myFirebaseAuthConfig)
+    AngularFireModule.initializeApp(firebaseConfig, myFirebaseAuthConfig),
+    MaterialModule.forRoot()
   ],
   providers: [TicketService],
   bootstrap: [InitComponent]
