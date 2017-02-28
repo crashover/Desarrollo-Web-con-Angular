@@ -9,8 +9,8 @@ var MongoClient = require('mongodb').MongoClient;
 MongoClient.connect('mongodb://localhost:27017/platzi-angular-mean', function (err, db){
     if(!err){
         console.log("MongoDB connect");
+        /*
         var ticketCollection = db.collection('tickets');
-
         var ticket1 = {
                 'id': 1,
                 'titulo': 'no me funciona la impresora',
@@ -24,19 +24,25 @@ MongoClient.connect('mongodb://localhost:27017/platzi-angular-mean', function (e
                 {'id': 3, 'titulo': 'no me funciona el celular', 'estado': 'in progress'},
                 {'id': 4, 'titulo': 'no me funciona una lampara', 'estado': 'really'}
             ];
-
         ticketCollection.insert(ticket1);
         ticketCollection.insert(ticket2, {w:1}, function(err, result) {});
         ticketCollection.insert(ticketSerie, {w:1}, function(err, result) {});
+        */
         }
 });
+
+var endpoints = require('./routes/endpoints');
+
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 app.options("*", cors());
+app.use("/", endpoints);
 
-var router = express.Router();
+var routes = express.Router();
+
+app.use(routes);
 
 var port = process.env.PORT || 3000;
 app.listen(port, function () {
